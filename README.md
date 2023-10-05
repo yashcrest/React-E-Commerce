@@ -10,7 +10,7 @@ To get started with the project locally, follow the steps below:
 
 1. Clone the repository:
    ````sh
-   git clone https://github.com/yashcrest/e-commerce.git ```
+   git clone https://github.com/yashcrest/e-commerce.git
    ````
 2. Navigate to the project directory
    ```
