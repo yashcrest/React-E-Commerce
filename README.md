@@ -1,4 +1,4 @@
-# E-Commerce Web Application
+# React-E-Commerce with Stripe Integration
 
 ## Description
 
