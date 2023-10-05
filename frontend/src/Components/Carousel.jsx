@@ -35,7 +35,7 @@ const Carousel = () => {
           <div className="container-carousel">
             <div className="overlay-image">
               <img
-                src="/img/empty_cart.webp"
+                src="/img/img_1.jpg"
                 className="d-block w-100 img-fluid"
                 alt="image 1"
               />
