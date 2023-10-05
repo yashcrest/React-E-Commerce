@@ -35,7 +35,7 @@ const Carousel = () => {
           <div className="container-carousel">
             <div className="overlay-image">
               <img
-                src="src/img/img_1.jpg"
+                src="frontend/public/img/empty_cart.webp"
                 className="d-block w-100 img-fluid"
                 alt="image 1"
               />
@@ -54,7 +54,7 @@ const Carousel = () => {
           <div className="container-carousel">
             <div className="overlay-image">
               <img
-                src="src/img/img_2.jpg"
+                src="frontend/public/img/img_2.jpg"
                 className="d-block w-100 img-fluid"
                 alt="image 2"
               />
@@ -74,7 +74,7 @@ const Carousel = () => {
           <div className="container-carousel">
             <div className="overlay-image">
               <img
-                src="src/img/img_3.jpg"
+                src="frontend/public/img/img_3.jpg"
                 className="d-block w-100 img-fluid"
                 alt="image 3"
               />
