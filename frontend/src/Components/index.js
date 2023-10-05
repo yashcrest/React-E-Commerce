@@ -1,4 +1,4 @@
-export { default as NavBar } from "./Navbar";
+export { default as Navbar } from "./NavBar";
 export { default as Carousel } from "./Carousel";
 export { default as Products } from "./Products";
 export { default as ProductInfo } from "./ProductInfo";

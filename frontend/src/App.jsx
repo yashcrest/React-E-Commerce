@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Cart, Checkout, Home, PageNotFound, Product } from "./Pages";
 import { Footer } from "./Components";
