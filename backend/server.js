@@ -1,6 +1,8 @@
 const express = require("express");
 var cors = require("cors"); //this is needed for allowing any IP address to access this backend
 const app = express();
+require("dotenv").config();
+const bodyParser = require("body-parser");
 
 //initialize stripe
 const Stripe = require("stripe");
@@ -12,7 +14,8 @@ const stripe = new Stripe(
 //middleware
 app.use(express.static("public")); //this is recommended by stripe docs
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const my_domain = process.env.vercel_domain || "http://localhost:4000/";
 
@@ -37,8 +40,8 @@ app.post("/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:5174/success",
-      cancel_url: "http://localhost:5174/failed",
+      success_url: "http://localhost:5173/success",
+      cancel_url: "http://localhost:5173/failed",
     });
 
     res.json({ url: session.url });
