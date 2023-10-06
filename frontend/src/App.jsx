@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Cart, Checkout, Home, PageNotFound, Product } from "./Pages";
+import { Cart, Failed, Home, PageNotFound, Product, Success } from "./Pages";
 import { Footer } from "./Components";
 
 const App = () => {
@@ -15,7 +15,8 @@ const App = () => {
           <Route path="/product/:id" element={<Product />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/product/*" element={<PageNotFound />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/failed" element={<Failed />} />
         </Routes>
         <Footer />
       </div>
