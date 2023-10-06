@@ -4,6 +4,9 @@
 
 This repository contains an e-commerce web application built using React and Redux. The application provides a user-friendly interface to browse products, add them to the cart, and proceed to checkout.
 
+### Live Demo
+https://react-e-commerce-kappa.vercel.app/
+
 ## Installation
 
 To get started with the project locally, follow the steps below:
