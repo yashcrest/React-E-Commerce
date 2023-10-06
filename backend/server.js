@@ -7,23 +7,42 @@ const stripe = require("stripe")(process.env.secret_key);
 
 //middleware
 app.use(express.static("public")); //this is recommended by stripe docs
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 
 const my_domain = process.env.vercel_domain || "http://localhost:4000";
 
-app.post("/create-checkout-session", async (req, res) => {
-  const session = await stripe.checkout.session.create({
-    line_items: [
-      {
-        // Provide the exact price ID
-        price: "{{}}",
-        quantity: 1,
-      },
-    ],
-    mode: "payment",
-    success,
-  });
+app.post("/checkout", async (req, res) => {
+  try {
+    const items = req.body.products;
+    let lineItems = items.map((item) => ({
+      price: item.id,
+      quantity: item.quantity,
+    }));
+
+    const success_url =
+      process.env.NODE_ENV === "production"
+        ? "https://react-e-commerce-kappa.vercel.app/success"
+        : "http://localhost:5173/success";
+
+    const cancel_url =
+      process.env.NODE_ENV === "production"
+        ? "https://react-e-commerce-kappa.vercel.app/cancel"
+        : "http://localhost:5173/cancel";
+
+    const session = await stripe.checkout.sessions.create({
+      line_items: lineItems,
+      mode: "payment",
+      success_url: success_url,
+      cancel_url: cancel_url,
+    });
+
+    res.json({ url: session.url });
+  } catch (error) {
+    console.error("Error creating Stripe session:", error);
+    res.status(500).json({ error: "Error creating Stripe session" });
+  }
 });
 
-app.listen(4000, () => console.log("Server running on port 4000"));
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log("Server running on port 4000"));
