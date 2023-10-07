@@ -25,12 +25,12 @@ app.post("/checkout", async (req, res) => {
 
     const success_url =
       process.env.NODE_ENV === "production"
-        ? process.env.vercel_domain
+        ? process.env.vercel_domain + "success"
         : "http://localhost:5173/success";
 
     const cancel_url =
       process.env.NODE_ENV === "production"
-        ? process.env.vercel_domain
+        ? process.env.vercel_domain + "failed"
         : "http://localhost:5173/failed";
 
     const session = await stripe.checkout.sessions.create({
