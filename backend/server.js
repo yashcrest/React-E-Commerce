@@ -17,8 +17,6 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const my_domain = process.env.vercel_domain || "http://localhost:4000/";
-
 app.post("/checkout", async (req, res) => {
   try {
     const items = req.body.products;
@@ -34,14 +32,14 @@ app.post("/checkout", async (req, res) => {
 
     const cancel_url =
       process.env.NODE_ENV === "production"
-        ? "https://react-e-commerce-kappa.vercel.app/cancel"
-        : "http://localhost:5173/cancel";
+        ? "https://react-e-commerce-kappa.vercel.app/failed"
+        : "http://localhost:5173/failed";
 
     const session = await stripe.checkout.sessions.create({
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/failed",
+      success_url: success_url,
+      cancel_url: cancel_url,
     });
 
     res.json({ url: session.url });

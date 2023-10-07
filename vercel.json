@@ -1,0 +1,26 @@
+{
+    "version" : 2,
+    "projects" : [
+        {
+            "name" : "frontend",
+            "root" : "frontend/",
+            "builds" : [
+                {
+                    "src" : "parckage.json",
+                    "use" : "@vercel/static-build",
+                    "config" : {"distDir" : "dist"}
+                }
+            ]
+        },
+        {
+            "name" : "backend",
+            "root" : "backend/",
+            "builds" : [
+                {
+                    "src" : "server.js",
+                    "use" : "@vercel/node"
+                }
+            ]
+        }
+    ]
+}
