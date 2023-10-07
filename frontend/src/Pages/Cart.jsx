@@ -46,7 +46,7 @@ const Cart = () => {
 
   //axios backend call
   const backendClient = axios.create({
-    baseURL: "https://react-ecommerce-backend.azurewebsites.net",
+    baseURL: "react-ecommerce-backend.azurewebsites.net",
   });
 
   //calling backend
