@@ -46,7 +46,7 @@ const Cart = () => {
 
   //axios backend call
   const backendClient = axios.create({
-    baseURL: "react-ecommerce-backend.azurewebsites.net",
+    baseURL: "https://react-ecommerce-backend.azurewebsites.net",
   });
 
   //calling backend
@@ -57,7 +57,7 @@ const Cart = () => {
         id: stripeProductMapping[product.id],
         quantity: product.quantity,
       }));
-      const response = await backendClient.post("/", {
+      const response = await backendClient.post("/checkout", {
         products: productsForCheckout,
       });
       console.log(response.data.url);
