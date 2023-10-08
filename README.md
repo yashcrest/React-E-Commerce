@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains an e-commerce web application built using React and Redux. The application provides a user-friendly interface to browse products, add them to the cart, and proceed to checkout. [Website Link] (https://react-e-commerce-kappa.vercel.app/cart)
+This repository contains an e-commerce web application built using React and Redux. The application provides a user-friendly interface to browse products, add them to the cart, and proceed to checkout. [Website Link](https://react-e-commerce-kappa.vercel.app)
 
 
 ### Live Demo
