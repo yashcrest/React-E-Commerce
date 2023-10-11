@@ -34,7 +34,6 @@ const Product = () => {
       setLoading(true);
       setSimilarProductsLoading(true);
       const response = await client.get(`${id}`);
-      console.log(response.data);
       setProduct(response.data);
       setLoading(false);
       const response2 = await client.get(`category/${response.data.category}`);

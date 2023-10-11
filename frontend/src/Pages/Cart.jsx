@@ -60,7 +60,6 @@ const Cart = () => {
       const response = await backendClient.post("/checkout", {
         products: productsForCheckout,
       });
-      console.log(response.data.url);
       if (response.data.url) {
         window.location.assign(response.data.url);
       }

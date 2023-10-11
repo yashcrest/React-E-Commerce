@@ -53,8 +53,6 @@ const ProductInfo = () => {
       setLoading(true);
       let response = await client.get();
       if (componentMounted) {
-        console.log(response);
-        console.log(response.data);
         setProducts(response.data);
         setLoading(false);
       }
