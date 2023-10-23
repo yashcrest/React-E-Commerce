@@ -47,7 +47,7 @@ const Product = () => {
   const ShowProduct = () => {
     return (
       <>
-        <div className="container px-sm-4">
+        <div className="container px-sm-4 mt-5 pt-5">
           <div className="row">
             <div className="col-md-6 col-sm-12 py-5">
               <img
