@@ -92,7 +92,7 @@ const Product = () => {
             {similarProducts.map((item) => {
               return (
                 <div
-                  className="card similar-product-info mx-4 text-center"
+                  className="card similar-product-info m-4 text-center"
                   key={item.id}
                 >
                   <img
