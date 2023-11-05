@@ -46,8 +46,7 @@ const Cart = () => {
 
   //axios backend call
   const backendClient = axios.create({
-    baseURL:
-      "http://localhost:3000" || "https://react-e-commerce-backend.vercel.app",
+    baseURL: "https://react-e-commerce-backend.vercel.app",
     withCredentials: true,
   });
 
