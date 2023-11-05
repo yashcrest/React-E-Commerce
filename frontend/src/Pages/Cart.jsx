@@ -46,7 +46,7 @@ const Cart = () => {
 
   //axios backend call
   const backendClient = axios.create({
-    baseURL: "https://react-e-commerce-backend.vercel.app",
+    baseURL: "https://react-e-commerce-backend.vercel.app/",
     withCredentials: true,
   });
 
@@ -58,7 +58,7 @@ const Cart = () => {
         id: stripeProductMapping[product.id],
         quantity: product.quantity,
       }));
-      const response = await backendClient.post("api/checkout", {
+      const response = await backendClient.post("/checkout", {
         products: productsForCheckout,
       });
       if (response.data.url) {
