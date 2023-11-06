@@ -57,7 +57,7 @@ const Cart = () => {
         id: stripeProductMapping[product.id],
         quantity: product.quantity,
       }));
-      const response = await backendClient.post("/checkout", {
+      const response = await backendClient.post("/checkout/", {
         products: productsForCheckout,
       });
       if (response.data.url) {
