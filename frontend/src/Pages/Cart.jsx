@@ -43,7 +43,6 @@ const Cart = () => {
     20: "price_1NxJeuIIas9tFQMROCyviUiG",
   };
 
- 
   //calling backend using fetch
   const checkout = async () => {
     try {
@@ -52,16 +51,18 @@ const Cart = () => {
         id: stripeProductMapping[product.id],
         quantity: product.quantity,
       }));
-      const response = await fetch("https://react-e-commerce-backend.vercel.app/checkout", {
-        credentials : 'include',
-        method: 'POST',
-        headers: {
-          'Content-Type' : 'application/json',
-        },
-        body : JSON.stringify({
-          products: productsForCheckout,
-        })
-      });
+      const response = await fetch(
+        "https://react-e-commerce-backend.vercel.app/checkout",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            products: productsForCheckout,
+          }),
+        }
+      );
 
       const data = await response.json();
       if (data.url) {
