@@ -44,7 +44,7 @@ const Cart = () => {
   };
 
  
-  //calling backend
+  //calling backend using fetch
   const checkout = async () => {
     try {
       //map the products to use the stripe products IDs
