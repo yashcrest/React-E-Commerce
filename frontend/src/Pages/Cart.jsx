@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import {
   FaCartShopping,
   FaPlus,
@@ -53,11 +52,19 @@ const Cart = () => {
         id: stripeProductMapping[product.id],
         quantity: product.quantity,
       }));
-      const response = await axios.post("https://react-e-commerce-backend.vercel.app/", {
-        products: productsForCheckout,
+      const response = await fetch("https://react-e-commerce-backend.vercel.app/", {
+        method: 'POST',
+        headers: {
+          'Content-Type' : 'application/json',
+        },
+        body : JSON.stringify({
+          products: productsForCheckout,
+        })
       });
-      if (response.data.url) {
-        window.location.assign(response.data.url);
+
+      const data = await response.json();
+      if (data.url) {
+        window.location.assign(data.url);
       }
     } catch (err) {
       console.log("Erorr during checkout: ", err);
