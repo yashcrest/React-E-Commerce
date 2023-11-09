@@ -53,6 +53,7 @@ const Cart = () => {
         quantity: product.quantity,
       }));
       const response = await fetch("https://react-e-commerce-backend.vercel.app/checkout", {
+        credentials : 'include',
         method: 'POST',
         headers: {
           'Content-Type' : 'application/json',
