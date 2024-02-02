@@ -15,14 +15,13 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <NavLink to="/cart" className="nav-link">
-                <BsCart4 color="white" size={40} />
+                <BsCart4 color="white" size={40}/>
                 <h6>{cart?.length}</h6>
               </NavLink>
             </li>
           </ul>
         </div>
       </div>
-      <div></div>
     </nav>
   );
 };

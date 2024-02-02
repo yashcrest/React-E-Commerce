@@ -41,11 +41,9 @@ const Carousel = () => {
               />
             </div>
             <div className="carousel-caption d-none d-md-block">
-              <h3>First slide label</h3>
+              <h3>Step Into Style</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-                placeat perferendis nesciunt ullam est magni suscipit illum
-                error odit eveniet.
+              Find your stride with our latest footwear collection. Where comfort meets chic.
               </p>
             </div>
           </div>
@@ -61,11 +59,9 @@ const Carousel = () => {
             </div>
 
             <div className="carousel-caption d-none d-md-block">
-              <h3>Second slide label</h3>
+              <h3>Season's Must-Haves</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
-                fugit reprehenderit animi enim dolor delectus harum nemo
-                eligendi totam necessitatibus!
+              Refresh your wardrobe with our selection of this season's trending styles.
               </p>
             </div>
           </div>
@@ -80,11 +76,9 @@ const Carousel = () => {
               />
             </div>
             <div className="carousel-caption d-none d-md-block">
-              <h3>Third slide label</h3>
+              <h3>Everyday Luxury</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum
-                est iusto placeat maxime, corporis officiis beatae rerum itaque.
-                Libero, dolor?
+              Experience everyday elegance with our premium casual wear line.
               </p>
             </div>
           </div>
