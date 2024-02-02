@@ -52,7 +52,7 @@ const Cart = () => {
         quantity: product.quantity,
       }));
       const response = await fetch(
-        "https://ecommerce-backend.azurewebsites.net/checkout",
+        "http://localhost:4000",
         {
           method: "POST",
           headers: {
