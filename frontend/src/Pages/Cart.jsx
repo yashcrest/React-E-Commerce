@@ -70,6 +70,7 @@ const Cart = () => {
       }
     } catch (err) {
       console.log("Erorr during checkout: ", err);
+      console.log(data);
     }
   };
 
