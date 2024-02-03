@@ -65,12 +65,12 @@ const Cart = () => {
       );
 
       const data = await response.json();
+      console.log(data);
       if (data.url) {
         window.location.assign(data.url);
       }
     } catch (err) {
       console.log("Erorr during checkout: ", err);
-      console.log(data);
     }
   };
 
