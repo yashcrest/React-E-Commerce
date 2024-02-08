@@ -96,3 +96,13 @@ html, body {
 .select-box {
   outline: none;
 }
+
+/* cart icon styling */
+.cart-icon {
+  border-radius: 50%;
+  background-color: #767171ec;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  color: #fff;
+}

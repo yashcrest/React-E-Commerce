@@ -16,7 +16,7 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink to="/cart" className="nav-link">
                 <BsCart4 color="white" size={40}/>
-                <h6>{cart?.length}</h6>
+                <h6 className="cart-icon">{cart?.length}</h6>
               </NavLink>
             </li>
           </ul>
