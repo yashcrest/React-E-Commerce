@@ -12,6 +12,13 @@ body {
   margin-top: auto;
 }
 
+/* navbar margin/padding styling */
+/* .navbar::after {
+  content: "";
+  display: block;
+  height: 60px;
+} */
+
 .navbar-toggler {
   outline: none;
 }

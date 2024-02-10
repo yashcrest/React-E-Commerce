@@ -210,7 +210,7 @@ const Cart = () => {
 
   return (
     <>
-      <h1 className="text-center my-5 border-bottom border-dark py-3 container">
+      <h1 className="text-center my-5 border-bottom border-dark py-3 pt-5 container">
         Cart
         <FaCartShopping className="mx-2" size={40} />
       </h1>

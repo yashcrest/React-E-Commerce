@@ -17,7 +17,11 @@ const Navbar = () => {
               <NavLink to="/cart" className="nav-link">
                 <div className="cart-icon-container">
                   <BsCart4 color="white" size={40} />
-                  <h6 className="cart-icon">{cart?.length}</h6>
+                  {cart.length > 0 ? (
+                    <h6 className="cart-icon">{cart.length}</h6>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </NavLink>
             </li>
