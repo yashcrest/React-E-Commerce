@@ -15,8 +15,10 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <NavLink to="/cart" className="nav-link">
-                <BsCart4 color="white" size={40}/>
-                <h6 className="cart-icon">{cart?.length}</h6>
+                <div className="cart-icon-container">
+                  <BsCart4 color="white" size={40} />
+                  <h6 className="cart-icon">{cart?.length}</h6>
+                </div>
               </NavLink>
             </li>
           </ul>
