@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//inital state of all the variables you want to track
 const initialState = {
   cart: JSON.parse(localStorage.getItem("cart")) || [], // this will be initial state of the cart when the user first visits the store or refreshs the page. we will retrieve the cart info from localstorage if it contains any items.
   status: "",
