@@ -4,11 +4,11 @@ body {
   margin: 0;
 }
 
-/* this is need to push the footer to the end of the page */
+/* this is needed to push the footer to the end of the page */
 .app {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 .footer-component {
   margin-top: auto;

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BsCart4 } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
-const Navbar = () => {
+const NavBar = () => {
   const { cart } = useSelector((state) => state.cart);
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
@@ -32,4 +31,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

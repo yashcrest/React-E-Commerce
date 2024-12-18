@@ -1,5 +1,3 @@
-import React from "react";
-
 const Failed = () => {
   return (
     <div className=" d-flex justify-content-center mt-5">

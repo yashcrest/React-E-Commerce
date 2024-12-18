@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Carousel, Footer, Products } from "../Components";
+import { Carousel, Products } from "../components";
 
 const Home = () => {
   return (

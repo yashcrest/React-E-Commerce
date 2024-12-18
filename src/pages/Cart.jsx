@@ -1,23 +1,25 @@
-import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Loader } from "../components";
 import {
   FaCartShopping,
   FaPlus,
   FaMinus,
   FaArrowLeftLong,
 } from "react-icons/fa6";
-import { useDispatch, useSelector } from "react-redux";
-//importing all the reducers method on CartSlice.js file
 import {
   removeFromCart,
   decrementProduct,
   increamentProduct,
 } from "../redux/action/CartSlice";
-import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const navigate = useNavigate(); //hook to navigate the different pages
-  const dispatch = useDispatch(); // redux hook to send data to redux state
-  const products = useSelector((state) => state.cart.cart); // this will run whenever a action is dispatched
+  console.log("cart component loaded");
+  const [loading, setLoading] = useState("false");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.cart.cart);
 
   //product id's mapping with Stripe id
   const stripeProductMapping = {

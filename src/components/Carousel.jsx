@@ -1,5 +1,3 @@
-import React from "react";
-
 const Carousel = () => {
   return (
     <div
@@ -43,7 +41,8 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <h3>Step Into Style</h3>
               <p>
-              Find your stride with our latest footwear collection. Where comfort meets chic.
+                Find your stride with our latest footwear collection. Where
+                comfort meets chic.
               </p>
             </div>
           </div>
@@ -61,7 +60,8 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <h3>Season's Must-Haves</h3>
               <p>
-              Refresh your wardrobe with our selection of this season's trending styles.
+                Refresh your wardrobe with our selection of this season's
+                trending styles.
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <h3>Everyday Luxury</h3>
               <p>
-              Experience everyday elegance with our premium casual wear line.
+                Experience everyday elegance with our premium casual wear line.
               </p>
             </div>
           </div>
