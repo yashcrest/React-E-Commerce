@@ -37,7 +37,7 @@ const ProductCard = ({ product, loading, onAddToCart }) => {
             </li>
           </ul>
           <div className="card-actions">
-            <Link to={`/products/${product.id}`} className="btn btn-dark m-1">
+            <Link to={`/product/${product.id}`} className="btn btn-dark m-1">
               View Details
             </Link>
             <button
