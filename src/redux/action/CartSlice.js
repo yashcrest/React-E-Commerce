@@ -33,7 +33,7 @@ export const CartSlice = createSlice({
       state.cart = updateCart;
       localStorage.setItem("cart", JSON.stringify(state.cart));
     },
-    increamentProduct: (state, action) => {
+    incrementProduct: (state, action) => {
       const itemIndex = state.cart.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -57,12 +57,8 @@ export const CartSlice = createSlice({
 });
 
 //all the reducer(method) we create here need to be exported to be used in other part of app
-export const {
-  addToCart,
-  removeFromCart,
-  increamentProduct,
-  decrementProduct,
-} = CartSlice.actions;
+export const { addToCart, removeFromCart, incrementProduct, decrementProduct } =
+  CartSlice.actions;
 
 //we also need to export the entire reducer as well because this need to be connected to the store.js file
 export default CartSlice.reducer;

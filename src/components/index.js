@@ -1,6 +1,0 @@
-export { default as Navbar } from "./NavBar";
-export { default as Carousel } from "./Carousel";
-export { default as Products } from "./Products";
-export { default as ProductInfo } from "./ProductInfo";
-export { default as Footer } from "./Footer";
-export { default as Loader } from "./Loader";

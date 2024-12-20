@@ -1,13 +1,8 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-// import { Success, Failed, Product, PageNotFound } from "./pages";
 import { Home } from "./pages";
-// import { Product } from "./pages";
-// import { Success } from "./pages";
-// import { Failed } from "./pages";
-// import { PageNotFound } from "./pages";
-import { Footer, Loader } from "./components";
-import Layout from "./pages/Layout";
+import { Footer, Layout } from "./components/Layout";
+import { Loader } from "./components/UI";
 
 // Lazy Loading
 const Cart = lazy(() => import("./pages/Cart"));

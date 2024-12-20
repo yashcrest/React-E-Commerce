@@ -1,4 +1,5 @@
-import { Carousel, Products } from "../components";
+import { Carousel } from "../components/UI";
+import { Products } from "../features/products";
 
 const Home = () => {
   return (
