@@ -12,7 +12,7 @@ const useCart = () => {
 
   //function to map products to strip product IDs
   const mapToStripeProducts = () => {
-    products.map((product) => ({
+    return products.map((product) => ({
       id: stripeProductMapping[product.id],
       quantity: product.quantity,
     }));
