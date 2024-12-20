@@ -24,18 +24,15 @@ const Cart = () => {
     try {
       setIsCheckoutLoading(true);
       const productsForCheckout = mapToStripeProducts();
-      const response = await fetch(
-        "https://ecommerce-backend.azurewebsites.net/checkout",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            products: productsForCheckout,
-          }),
-        }
-      );
+      const response = await fetch(import.meta.env.VITE_ECOMMERCE_BACKEND_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          products: productsForCheckout,
+        }),
+      });
 
       const data = await response.json();
       if (data.url) {
