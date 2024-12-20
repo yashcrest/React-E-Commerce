@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useCart from "../hooks/useCart";
@@ -24,17 +25,14 @@ const Cart = () => {
     try {
       setIsCheckoutLoading(true);
       const productsForCheckout = mapToStripeProducts();
-      const response = await fetch(import.meta.env.VITE_ECOMMERCE_BACKEND_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      const response = await axios.post(
+        import.meta.env.VITE_ECOMMERCE_BACKEND_URL,
+        {
           products: productsForCheckout,
-        }),
-      });
+        }
+      );
 
-      const data = await response.json();
+      const { data } = response;
       if (data.url) {
         window.location.assign(data.url);
       }
