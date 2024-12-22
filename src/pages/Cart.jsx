@@ -6,7 +6,6 @@ import { CartItem, EmptyCart, CartSummary } from "../features/cart";
 import { FaCartShopping, FaArrowLeftLong } from "react-icons/fa6";
 
 const Cart = () => {
-  console.log("cart component loaded");
   const navigate = useNavigate();
   const [isCheckoutLoading, setIsCheckoutLoading] = useState(false);
   const {

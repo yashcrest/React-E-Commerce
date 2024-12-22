@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages";
 import { Footer, Layout } from "./components/Layout";
 import { Loader } from "./components/UI";
+import { Login, Register } from "./pages";
+import ProtectedRoute from "./auth/ProtectedRoute";
 
 // Lazy Loading
 const Cart = lazy(() => import("./pages/Cart"));
@@ -18,11 +20,36 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/success" element={<Success />} />
-            <Route path="/failed" element={<Failed />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/product/:id" element={<Product />} />
+
+            {/* Protected routes */}
+            <Route
+              path="/cart"
+              element={
+                <ProtectedRoute>
+                  <Cart />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/success"
+              element={
+                <ProtectedRoute>
+                  <Success />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/failed"
+              element={
+                <ProtectedRoute>
+                  <Failed />
+                </ProtectedRoute>
+              }
+            />
           </Route>
         </Routes>
         <Footer />

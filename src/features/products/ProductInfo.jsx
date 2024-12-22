@@ -5,14 +5,15 @@ import { setCategory } from "../../redux/action/ProductFilterSlice";
 import ProductFilter from "./ProductFilter";
 import ProductCard from "./ProductCard";
 import useProducts from "../../hooks/useProducts";
+import { toast } from "react-toastify";
+import { useUser } from "@clerk/clerk-react";
 
 const ProductInfo = () => {
   const { products, loading } = useProducts();
-
   const dispatch = useDispatch();
-
-  //bringing in productFilter State
   const { category } = useSelector((state) => state.productFilter);
+
+  const { isSignedIn } = useUser();
 
   // different category
   const categories = [
@@ -47,6 +48,10 @@ const ProductInfo = () => {
 
   //add item to cart handler
   const handleAddToCart = (product) => {
+    if (!isSignedIn) {
+      toast.error("Please sign in to add items to cart");
+      return;
+    }
     dispatch(addToCart(product));
   };
 

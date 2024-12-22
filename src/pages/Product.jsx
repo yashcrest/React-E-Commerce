@@ -1,7 +1,9 @@
+import { useUser } from "@clerk/clerk-react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/action/CartSlice";
+import { toast } from "react-toastify";
 import Marquee from "react-fast-marquee";
+import { addToCart } from "../redux/action/CartSlice";
 import useProductDetails from "../hooks/useProductDetails";
 import {
   ProductDetails,
@@ -14,9 +16,14 @@ const Product = () => {
   const { product, similarProducts, loading, similarProductsLoading, error } =
     useProductDetails(id);
   const dispatch = useDispatch();
+  const { isSignedIn } = useUser();
 
   //using redux useDispatch hook to send data across to cart
   const addProductHandler = (item) => {
+    if (!isSignedIn) {
+      toast.error("Please sign in to add items to cart");
+      return;
+    }
     dispatch(addToCart(item));
   };
 
