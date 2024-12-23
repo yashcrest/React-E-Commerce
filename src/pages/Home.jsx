@@ -1,4 +1,4 @@
-import { Carousel } from "../components/UI";
+import { Carousel } from "../components/ui";
 import { Products } from "../features/products";
 
 const Home = () => {
