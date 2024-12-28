@@ -5,7 +5,7 @@ import { setCategory } from "../../redux/action/ProductFilterSlice";
 import ProductFilter from "./ProductFilter";
 import ProductCard from "./ProductCard";
 import useProducts from "../../hooks/useProducts";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import { useUser } from "@clerk/clerk-react";
 
 const ProductInfo = () => {

@@ -1,7 +1,7 @@
 import { useUser } from "@clerk/clerk-react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import Marquee from "react-fast-marquee";
 import { addToCart } from "../redux/action/CartSlice";
 import useProductDetails from "../hooks/useProductDetails";
