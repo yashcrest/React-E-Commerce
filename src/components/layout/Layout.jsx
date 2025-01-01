@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
 import { Suspense } from "react";
-import { Loader } from "../UI";
+import { Loader } from "../ui";
 
 const Layout = () => {
   return (
