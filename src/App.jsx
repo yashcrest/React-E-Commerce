@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages";
-import { Footer, Layout } from "./components/Layout";
+import { Footer, Layout } from "./components/layout";
 import { Loader } from "./components/ui";
 import { Login, Register } from "./pages";
 import ProtectedRoute from "./auth/ProtectedRoute";
