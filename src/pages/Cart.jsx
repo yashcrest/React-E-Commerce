@@ -25,7 +25,7 @@ const Cart = () => {
       setIsCheckoutLoading(true);
       const productsForCheckout = mapToStripeProducts();
       const response = await axios.post(
-        'https://react-e-commerce-backend-wxjq.onrender.com/checkout',
+        import.meta.env.VITE_ECOMMERCE_BACKEND_URL,
         {
           products: productsForCheckout,
         }
