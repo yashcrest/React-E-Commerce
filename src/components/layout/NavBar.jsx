@@ -11,43 +11,44 @@ const NavBar = () => {
         <NavLink to="/" className="navbar-brand">
           Op Shop
         </NavLink>
-        <div>
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
+
+        <ul className="navbar-nav ms-auto">
+          <div className="d-flex">
+            <li className="nav-item mx-2">
               <NavLink to="/cart" className="nav-link">
                 <div className="cart-icon-container">
-                  <BsCart4 color="white" size={40} />
+                  <BsCart4 color="white" size={35} />
                   {cart.length > 0 && (
-                    <h6 className="cart-icon">{cart.length}</h6>
+                    <p className="cart-icon">{cart.length}</p>
                   )}
                 </div>
               </NavLink>
             </li>
-            <SignedIn>
-              <div>
-                <li className="nav-item">
+            <div className="d-flex align-items-center">
+              <SignedIn>
+                <li className="nav-item d-flex align-items-center">
                   <UserButton />
                 </li>
-              </div>
-            </SignedIn>
-            <SignedOut>
-              <NavLink to="/login" className="nav-link">
-                <div>
-                  <li className="nav-item">
-                    <span>Sign In</span>
-                  </li>
-                </div>
-              </NavLink>
-              <NavLink to="/register" className="nav-link">
-                <div>
-                  <li className="nav-item">
-                    <span>Register</span>
-                  </li>
-                </div>
-              </NavLink>
-            </SignedOut>
-          </ul>
-        </div>
+              </SignedIn>
+              <SignedOut>
+                <NavLink to="/login" className="nav-link">
+                  <div>
+                    <li className="nav-item">
+                      <span>Sign In</span>
+                    </li>
+                  </div>
+                </NavLink>
+                <NavLink to="/register" className="nav-link">
+                  <div>
+                    <li className="nav-item">
+                      <span>Register</span>
+                    </li>
+                  </div>
+                </NavLink>
+              </SignedOut>
+            </div>
+          </div>
+        </ul>
       </div>
     </nav>
   );
