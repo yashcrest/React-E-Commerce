@@ -53,6 +53,7 @@ const Cart = () => {
           size={30}
           className="mb-4"
           onClick={() => navigate("/")}
+          style={{ cursor: "pointer" }}
         />
       </div>
       {products.length > 0 ? (
