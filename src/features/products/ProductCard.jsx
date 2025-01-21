@@ -33,7 +33,7 @@ const ProductCard = ({ product, loading, onAddToCart }) => {
             </p>
             <ul className="list-group list-group-flush">
               <li className="list-group-item lead fw-semibold">
-                {product.price}
+                ${product.price}
               </li>
             </ul>
             <div className="card-actions">
