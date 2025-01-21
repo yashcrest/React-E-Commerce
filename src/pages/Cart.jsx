@@ -77,6 +77,10 @@ const Cart = () => {
               onCheckout={checkout}
               isCheckoutLoading={isCheckoutLoading}
             />
+            <span>
+              Please give 10-15 seconds to redirect to payment gateway as the
+              cold start is longer for free plan for render :(
+            </span>
           </div>
         </div>
       ) : (
